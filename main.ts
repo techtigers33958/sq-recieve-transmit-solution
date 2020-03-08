@@ -1,7 +1,6 @@
 // When the operation and value are received:
 //
 // -Calculate Answer and send it
-//
 radio.onReceivedValue(function (name, value) {
     calculateAnswer(name, value)
     radio.sendString("" + (answer))
@@ -16,7 +15,7 @@ input.onButtonPressed(Button.B, function () {
     basic.showString("" + (answer))
 })
 // This calculates the answer based on the received
-// operation and number 
+// operation and number
 function calculateAnswer (operation: string, operand: number) {
     if (operation == "DBL") {
         answer = operand * 2
